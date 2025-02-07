@@ -1,21 +1,70 @@
-Use Case Overview: 
-A company receives daily transaction data from multiple sources in CSV format, which is stored in an AWS S3 bucket. Our objective is to efficiently query and analyze this data in Snowflake, applying basic transformations as per business requirements, without the need for manual file loading.
-Before we begin, please note that each of you will be working on a separate branch for version control. Additionally, for setting up the AWS account, we request that you three collaborate to create a single AWS account where all of you have access. This shared account will be used to complete all the steps in this project.
+# Automated Data Pipeline: AWS S3 to Snowflake
 
-[1_AWS_Account_creation 2.docx](https://github.com/user-attachments/files/18701167/1_AWS_Account_creation.2.docx)
+## Project Overview
 
-We have two main challenges to address:
-Problem 1: For daily file uploads, we need to implement a system that automatically loads files into a Snowflake table as soon as they are uploaded to the AWS S3 bucket.
-Problem 2: For monthly file uploads, where files are stored in new folders in the AWS S3 bucket (e.g., 012025, 022025, 032025), we need to develop a solution to load these files into the Snowflake table efficiently.
-To tackle these challenges, we'll be utilizing the following tools and skills:
-Tools:
-•	Snowflake
-•	AWS (Amazon Web Services)
-Skills:
-•	Snowflake: Stage, Snowpipe, Tasks
-•	SQL Transformations
-•	Snowpark and Python
-This project will provide you with hands-on experience in cloud data storage, ETL (Extract, Transform, Load) processes, and data analytics. You'll learn how to automate data ingestion, perform transformations, and set up efficient querying mechanisms.
-We encourage you to collaborate, share ideas, and support each other throughout this project. If you have any questions or need assistance, please don't hesitate to reach out to your mentors or team leads.
-Good luck, and we look forward to seeing your innovative solutions!
+This project implements an automated data pipeline that efficiently loads and transforms daily transaction data from AWS S3 into Snowflake for analysis. The system handles both daily and monthly file uploads, applying necessary transformations as per business requirements.
 
+## Challenges Addressed
+
+1. **Daily File Uploads**: Automatically load files into a Snowflake table as soon as they are uploaded to the AWS S3 bucket.
+2. **Monthly File Uploads**: Efficiently load files from new monthly folders in the AWS S3 bucket (e.g., 012025, 022025, 032025) into the Snowflake table.
+
+## Tools and Technologies
+
+- Snowflake
+- AWS (Amazon Web Services)
+- SQL
+- Snowpark
+- Python
+
+## Key Features
+
+- Automated data ingestion from AWS S3 to Snowflake
+- Real-time processing of daily uploads
+- Efficient handling of monthly batch uploads
+- Basic data transformations as per business logic
+- Scalable and maintainable data pipeline
+
+## Setup and Installation
+
+1. AWS Account Creation
+   - Collaborate with team members to create a shared AWS account
+   - Ensure all team members have appropriate access
+
+2. Snowflake Configuration
+   - Set up Snowflake account and warehouse
+   - Configure stages, Snowpipe, and tasks
+
+3. AWS S3 Configuration
+   - Create necessary S3 buckets
+   - Set up IAM roles and policies for Snowflake integration
+
+4. Pipeline Implementation
+   - Develop SQL scripts for data transformations
+   - Implement Snowpipe for continuous data loading
+   - Create Snowflake tasks for scheduled operations
+
+## Usage
+
+Refer this doc for aws account setup
+[1_AWS_Account_creation 2.docx](https://github.com/user-attachments/files/18701238/1_AWS_Account_creation.2.docx)
+
+
+## Contributing
+
+This project is developed collaboratively. Each team member should work on a separate branch for version control. Please follow these steps for contributing:
+
+1. Create a new branch for your feature
+2. Commit your changes
+3. Push to your branch
+4. Create a Pull Request
+
+## Team
+
+- Ashish (Reviewer)
+- Anand (Reviewer)
+- Apoorv (Maintainer)
+
+## Support
+
+For any questions or assistance, please contact the project mentors or team leads.
